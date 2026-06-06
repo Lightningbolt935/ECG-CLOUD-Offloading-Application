@@ -1,0 +1,24 @@
+=================================================================
+QSO-POA ALLOCATION RESULTS — For Thesis
+=================================================================
+
+Algorithm          : QSO (Quokka Swarm) + POA (Puma Optimization)
+QSO Population     : 30 quokkas
+QSO Iterations     : 50 per task
+POA Iterations     : 30 per task
+Saturation thresh  : 80%
+Overflow policy    : Direct to cloud
+
+Allocation Results:
+  Total tasks      : 17328
+  Edge (QSO-POA)   : 14740 (85.1%)
+  Cloud (Critical) : 2588 (14.9%)
+  Cloud (Overflow) : 0 (0.0%)
+
+Load Balance:
+  CV of assignments: 0.0238
+  Assessment       : Excellent
+
+Edge Performance:
+  Mean latency : 98.4177 ms
+  Mean energy  : 1.972687 mJ

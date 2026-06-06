@@ -1,0 +1,18 @@
+=================================================================
+NSGA-II SCHEDULING RESULTS — For Thesis
+=================================================================
+Algorithm    : NSGA-II (Deb et al., 2002)
+Population   : 100
+Generations  : 200
+Objectives   : latency, energy, execution_time
+Topology     : Chennai 4-zone, 10 nodes
+Pareto front : 100 non-dominated solutions
+
+Optimal Policy (min-latency selection):
+  Latency        : 249.20 ms
+  Energy         : 4.9784 mJ
+  Network Usage  : 67.8806 KB
+
+Improvement vs Pure Cloud:
+  Latency  : +39.2%
+  Energy   : +51.9%

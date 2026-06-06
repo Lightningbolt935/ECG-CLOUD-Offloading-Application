@@ -1,0 +1,27 @@
+=================================================================
+CLUSTERING RESULTS — For Thesis
+=================================================================
+
+Algorithm    : Incremental K-Means++ (MiniBatchKMeans)
+Optimal k    : 3 (selected by max silhouette score)
+Batch size   : 500 windows (~41 min ECG per batch)
+Feature dims : 8 (5 complexity + 3 task parameters)
+
+Quality Metrics:
+  Silhouette Score     : 0.3367
+  Davies-Bouldin Index : 1.2018
+
+k Selection Results:
+     k   Silhouette   Davies-Bouldin
+     2       0.4658           0.9694
+     3       0.4986           0.8059 ← selected
+     4       0.4783           1.0602
+     5       0.3122           1.1794
+     6       0.4541           0.9180
+     7       0.4211           1.2131
+     8       0.3707           0.9592
+
+Cluster Profiles:
+  Cluster 0: n=1538 (8.88%), MI=1021, composite=0.151, QRS=0.162, ST=0.069mV → EDGE (Simple)
+  Cluster 1: n=14097 (81.35%), MI=2699, composite=0.397, QRS=0.952, ST=0.200mV → EDGE_OR_FOG (Moderate)
+  Cluster 2: n=1693 (9.77%), MI=1206, composite=0.238, QRS=0.223, ST=0.238mV → EDGE (Simple)

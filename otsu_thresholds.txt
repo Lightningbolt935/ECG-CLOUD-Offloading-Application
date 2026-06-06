@@ -1,0 +1,6 @@
+# Otsu-derived thresholds for ECG Task Profiling Pipeline
+# Paste these into ecg_pipeline_day1_v4.py
+
+composite_t1 = 0.2747
+composite_t2 = 0.4172
+st_threshold_mv = 0.3105
