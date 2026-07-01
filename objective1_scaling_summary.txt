@@ -1,0 +1,7 @@
+======================================================================
+OBJECTIVE 1 SCALING SUMMARY (NO PURE BASES)
+======================================================================
+
+Task volume scales: [100, 1000, 5000, 10000, 17328]
+Algorithms compared: NSGA-II, PSO, GA, Weighted Sum Method
+All metrics compiled successfully.

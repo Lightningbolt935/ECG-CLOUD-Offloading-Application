@@ -663,7 +663,7 @@ def run_nsga2(cluster_tasks):
     pareto_solutions  = [population[i] for i in pareto_idx]
     pareto_objectives = objectives[pareto_idx]
 
-    print(f"\n  ✓ NSGA-II complete")
+    print(f"\n  [DONE] NSGA-II complete")
     print(f"  Pareto front size: {len(pareto_solutions)} solutions")
 
     return pareto_solutions, pareto_objectives, best_latency_history
@@ -873,6 +873,9 @@ def run_scheduling():
     pareto_df = pd.DataFrame(pareto_objectives,
                              columns=['latency_ms','energy_mJ','network_kb'])
     pareto_df.to_csv('./nsga2_pareto_front.csv', index=False)
+    
+    # Save convergence history
+    pd.DataFrame({'generation': range(1, len(lat_history)+1), 'best_latency_ms': lat_history}).to_csv('./nsga2_convergence.csv', index=False)
 
     # Save summary
     summary = []

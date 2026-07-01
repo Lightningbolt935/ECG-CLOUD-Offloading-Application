@@ -106,18 +106,12 @@ def sample_entropy(signal_mv, m=2, r_factor=0.2):
         return 0.0
 
     def count_matches(m_len):
-        num_windows = N - m_len
-        if num_windows <= 0:
-            return 0
-        
-        # Pre-extract all windows to vectorize the inner loop
-        windows = np.array([sig[i:i + m_len] for i in range(num_windows)])
-        
         count = 0
-        for i in range(num_windows - 1):
-            # Compute distance from current window to all subsequent windows simultaneously
-            diffs = np.max(np.abs(windows[i+1:] - windows[i]), axis=1)
-            count += np.sum(diffs < r)
+        for i in range(N - m_len):
+            tmpl = sig[i:i + m_len]
+            for j in range(i + 1, N - m_len):
+                if np.max(np.abs(sig[j:j + m_len] - tmpl)) < r:
+                    count += 1
         return count
 
     A = count_matches(m + 1)
